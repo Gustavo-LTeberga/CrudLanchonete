@@ -1,0 +1,47 @@
+vai conter inicialmente
+
+
+[index]
+{
+
+    pesquisa 
+    cards{
+        nome: 
+        preço:
+        categoria:
+        descrição:
+    }
+
+}
+
+[painel]{
+
+    cadastrar{
+        nome:
+        preço:
+        categoria:
+        descrição:
+    }
+    editar{
+        nome:
+        preço:
+        categoria:
+        descrição:
+    }
+    apagar
+    
+}
+[SQL]{
+    produtos{
+        id:
+        nome:
+        preco:
+        descricao:
+        id_categoria(FK)
+    }
+    categorias{
+        id:
+        nome:
+    }
+
+}
