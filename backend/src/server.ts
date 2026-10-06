@@ -1,8 +1,9 @@
-import { ProductModel } from "./model/products.js";
+import { CategoryService } from "./services/category.js";
 
-const productModel = new ProductModel();
+const category = new CategoryService;
 
-const products = await productModel.listAll();
+/*let noome : string = "Lanches";
 
+console.log(await category.create(noome));*/
 
-console.log(products);
+console.log(await category.listAll());
