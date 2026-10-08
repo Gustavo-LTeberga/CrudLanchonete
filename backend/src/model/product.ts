@@ -23,22 +23,22 @@ export class ProductModel{
 
     }
 
-    async createProducts(name: string, price: number, description: string, id_categoria: number) {
+    async createProducts(image : string, name: string, price: number, description: string, id_categoria: number) {
 
         const [result] = await connection.query(
-            "INSERT INTO products (name, price, description, id_category) VALUE (?,?,?,?)",
-            [name, price, description, id_categoria]
+            "INSERT INTO products (image, name, price, description, id_category) VALUE (?,?,?,?,?)",
+            [image, name, price, description, id_categoria]
         )
 
         return result;
 
     }
 
-    async updateProducts(id: number, name: string, price: number, description: string, id_categoria: number) {
+    async updateProducts(id: number,image:string, name: string, price: number, description: string, id_categoria: number) {
 
         const [result] = await connection.query(
-            "UPDATE products SET name = ?, price = ?, description = ?, id_category = ? WHERE id = ?",
-            [name, price, description, id_categoria, id]
+            "UPDATE products SET image = ?, name = ?, price = ?, description = ?, id_category = ? WHERE id = ?",
+            [image, name, price, description, id_categoria, id]
         )
 
         return result;
